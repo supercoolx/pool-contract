@@ -1,0 +1,7 @@
+node_modules
+bin
+build/contracts
+types/truffle-contracts
+.secret
+.husky
+.vscode

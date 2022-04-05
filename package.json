@@ -1,0 +1,54 @@
+{
+  "name": "pool-contract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "truffle test",
+    "generate-types": "npx typechain --target=truffle-v5 'build/contracts/*.json'",
+    "postinstall": "npx truffle compile && npm run generate-types",
+    "lint": "solhint ./contracts/omnibus-contract.sol --fix && eslint --fix ./test/**",
+    "prepare": "husky install",
+    "prettier:solidity": "prettier --write ./*.sol",
+    "migrate": "truffle migrate"
+  },
+  "keywords": [
+    "pool",
+    "contract"
+  ],
+  "author": "dmytro",
+  "license": "MIT",
+  "dependencies": {
+    "truffle": "^5.4.22"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.3.3",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "@truffle/hdwallet-provider": "^2.0.4",
+    "@typechain/ethers-v5": "^8.0.4",
+    "@typechain/truffle-v5": "^6.0.0",
+    "@types/bignumber.js": "^5.0.0",
+    "@types/bn.js": "^5.1.0",
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.10",
+    "@types/web3": "^1.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.4.1",
+    "ethereumjs-wallet": "^1.0.2",
+    "ethers": "^5.6.2",
+    "husky": "^7.0.0",
+    "prettier": "^2.5.0",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "solhint": "^3.2.0",
+    "solhint-plugin-prettier": "^0.0.5",
+    "truffle-wallet-provider": "^0.0.5",
+    "ts-generator": "^0.1.1",
+    "ts-node": "^10.4.0",
+    "typechain": "^6.0.4",
+    "typescript": "^4.5.2",
+    "typescript-eslint": "^0.0.1-alpha.0"
+  }
+}
